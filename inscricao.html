@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Inscrição</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <a class="skip-link" href="#main">Ir para o conteúdo</a>
+    <header>
+        <div class="header-inner">
+            <img src="assets/Logo.png" alt="Logo da ONG" class="logo" />
+            <button id="navToggle" class="nav-toggle" aria-controls="main-nav" aria-expanded="false" aria-label="Abrir menu">☰</button>
+            <nav id="main-nav" class="main-nav" aria-label="Navegação principal">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="doacao.html">Doações</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main id="main">
+        <section>
+            <h2>Formulário de Inscrição</h2>
+            <form action="processa_inscricao.php" method="POST">
+
+                <label for="nome">Nome:</label><br>
+                <input type="text" id="nome" name="nome"><br>
+                <label for="endereco">Endereço:</label><br>
+                <input type="text" id="endereco" name="endereco"><br>
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" ><br>
+                <label for="telefone">Telefone:</label><br>
+                <input type="tel" id="telefone" name="telefone"><br>
+                <label for="comentarios">Por que eu quero me inscrever?</label><br>
+                <textarea id="comentarios" name="comentarios" rows="4" cols="60" placeholder="Digite sua mensagem"></textarea><br>
+                
+                <button type="submit" class="btn btn--large">Enviar Inscrição</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Projeto Recomeço. Todos os direitos reservados.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

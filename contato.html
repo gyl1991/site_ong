@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contato — Projeto Recomeço</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="page-contato">
+  <a class="skip-link" href="#main">Ir para o conteúdo</a>
+  <header>
+    <div class="header-inner">
+      <img src="assets/Logo.png" alt="Logo da ONG" class="logo" />
+      <button id="navToggle" class="nav-toggle" aria-controls="main-nav" aria-expanded="false" aria-label="Abrir menu">☰</button>
+      <nav id="main-nav" class="main-nav" aria-label="Navegação principal">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="inscricao.html">Inscrição</a></li>
+          <li><a href="doacao.html">Doações</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="contact-hero">
+      <h1>Fale conosco</h1>
+      <p class="lead">Tem dúvidas ou quer mais informações? Envie uma mensagem e responderemos o mais breve possível.</p>
+    </section>
+
+    <section aria-labelledby="form-contato">
+      <h2 id="form-contato">Formulário de Contato</h2>
+      <form id="contactForm" action="#" method="post" novalidate>
+        <div class="form-row">
+          <label for="nome">Nome completo</label><br>
+          <input id="nome" name="nome" type="text" required aria-required="true" />
+        </div>
+
+        <div class="form-row">
+          <label for="email">E‑mail</label><br>
+          <input id="email" name="email" type="email" required aria-required="true" />
+        </div>
+
+        <div class="form-row">
+          <label for="assunto">Assunto</label><br>
+          <input id="assunto" name="assunto" type="text" required />
+        </div>
+
+        <div class="form-row">
+          <label for="mensagem">Mensagem</label><br>
+          <textarea id="mensagem" name="mensagem" rows="6" required></textarea><br
+        </div>
+
+        <div class="form-row">
+          <button class="btn btn--large" type="submit">Enviar mensagem</button>
+        </div>
+
+        <p id="formStatus" aria-live="polite" class="form-status" hidden></p>
+      </form>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Projeto Recomeço. Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    // Pequeno handler para feedback no envio (mock)
+    (function(){
+      const form = document.getElementById('contactForm');
+      const status = document.getElementById('formStatus');
+      form.addEventListener('submit', function(e){
+        e.preventDefault();
+        status.hidden = false;
+        status.textContent = 'Enviando...';
+        // Simula envio
+        setTimeout(()=>{
+          status.textContent = 'Mensagem enviada com sucesso. Obrigado!';
+          form.reset();
+        }, 800);
+      });
+    })();
+  </script>
+</body>
+</html>

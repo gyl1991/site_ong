@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projeto Recomeço</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Skip link para melhorar navegação por teclado -->
+  <a class="skip-link" href="#main">Ir para o conteúdo</a>
+  <header>
+    <div class="header-inner">
+  <img src="assets/Logo.png" alt="Logo da ONG" class="logo" />
+      <!-- botão para alternar menu em telas pequenas -->
+      <button id="navToggle" class="nav-toggle" aria-controls="main-nav" aria-expanded="false" aria-label="Abrir menu">☰</button>
+      <nav id="main-nav" class="main-nav" aria-label="Navegação principal">
+        <ul>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#projetos">Projetos</a></li>
+          <li><a href="#voluntariado">Voluntariado</a></li>
+          <li><a href="#doacoes">Doações</a></li>
+          <li><a href="#transparencia">Transparência</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section id="login">
+      <h2>🔐 Acesso Administrativo</h2>
+      <button onclick="loginComGoogle()">Entrar com Google</button>
+    </section>
+
+    <section id="sobre">
+      <h2>🐶 Sobre a ONG</h2>
+      <p>Protegemos animais em situação de risco com resgate, cuidados e adoção responsável.</p>
+    </section>
+
+    <section id="projetos">
+      <h2>📸 Projetos</h2>
+      <div class="galeria">
+        <figure>
+          <img src="assets/projeto1.jpg" alt="Resgate de cães">
+          <figcaption>Resgate de cães</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/projeto2.jpg" alt="Feira de adoção">
+          <figcaption>Feira de adoção</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="voluntariado">
+      <h2>🤝 Voluntariado</h2>
+  <p>Inscreva-se e acompanhe seu histórico de participação.</p>
+  <!-- usar link estilizado em vez de <button><a></a></button> -->
+  <a class="btn" href="inscricao.html" onclick="inscrever()">Inscrever-se</a>
+      
+    </section>
+
+    <section id="doacoes">
+      <h2>💰 Doações</h2>
+      <p>Doe online e acompanhe o impacto da sua contribuição.</p>
+      <!-- link estilizado para doação -->
+  <a class="btn" href="doacao.html" onclick="doação()">Faça uma doação</a>
+    </section>
+
+    <section id="transparencia">
+      <h2>📄 Transparência</h2>
+      <p>Acesse nossos relatórios e documentos públicos.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Projeto Recomeço. Todos os direitos reservados.</p>
+  </footer>
+  <!-- Firebase SDKs (compat) - substitua pelos valores do seu projeto -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-auth-compat.js"></script>
+
+  <script>
+    // Substitua os valores abaixo pelos do Console do Firebase
+    const firebaseConfig = {
+      apiKey: "SUA_API_KEY",
+      authDomain: "SEU_PROJECT_ID.firebaseapp.com",
+      projectId: "SEU_PROJECT_ID",
+      storageBucket: "SEU_PROJECT_ID.appspot.com",
+      messagingSenderId: "SENDER_ID",
+      appId: "APP_ID"
+    };
+    // Inicializa o Firebase (somente se ainda não tiver sido inicializado)
+    if (typeof firebase !== 'undefined' && !firebase.apps?.length) {
+      firebase.initializeApp(firebaseConfig);
+    }
+  </script>
+
+  <script src="script.js"></script>
+</body>
+</html>
