@@ -4,39 +4,42 @@ Este repositório contém o desenvolvimento do site oficial da ONG Projeto Recom
 
 🎯 Propósito do Projeto:
 
-Criar uma plataforma digital acessível e moderna que:
+-Criar uma plataforma digital acessível e moderna que:
 
-Divulgue projetos sociais e campanhas em andamento
+-Divulgue projetos sociais e campanhas em andamento
 
-Facilite o contato com voluntários, parceiros e doadores
+-Facilite o contato com voluntários, parceiros e doadores
 
-Ofereça formulários de inscrição para voluntariado e doações
+-Ofereça formulários de inscrição para voluntariado e doações
 
-Conecte a ONG às redes sociais e canais de comunicação
+-Conecte a ONG às redes sociais e canais de comunicação
 
 🛠️ Tecnologias Utilizadas:
 
-HTML5 e CSS3 para estrutura e estilo
+-HTML5 e CSS3 para estrutura e estilo
 
-JavaScript para interatividade
+-JavaScript para interatividade
 
-Bootstrap para responsividade
+-Bootstrap para responsividade
 
-Git e GitHub para versionamento e colaboração
+-Git e GitHub para versionamento e colaboração
 
 
 🚀 Como Executar Localmente
 Clone o repositório:
 
 bash
+
 git clone https://github.com/gyl1991/site_ong.git
 Navegue até o diretório:
 
 bash
+
 cd site_ong
 Abra o arquivo index.html em seu navegador preferido.
 
-🤝 Como Contribuir
+🤝 Como Contribuir:
+
 Quer ajudar a melhorar o site? Aqui está como:
 
 Faça um fork do projeto
